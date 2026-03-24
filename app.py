@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import os
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
@@ -12,7 +13,11 @@ import streamlit as st
 from src.validator import ValidationResult, RULE_DESCRIPTIONS, validate_workbook
 
 
-UPLOAD_DIR = Path("data/uploads")
+# Usar /tmp en Streamlit Cloud, data/uploads en desarrollo local
+if "STREAMLIT_SERVER_HEADLESS" in os.environ:
+    UPLOAD_DIR = Path("/tmp/streamlit_uploads")
+else:
+    UPLOAD_DIR = Path("data/uploads")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 
