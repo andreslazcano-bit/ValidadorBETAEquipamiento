@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "validador-emtp"
+version = "0.1.0"
+description = "Validador de equipamiento EMTP 2026"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "streamlit==1.44.1",
+    "openpyxl==3.1.5",
+    "pandas==2.2.3",
+]
+
+[tool.streamlit]
+logger.level = "warning"
