@@ -1,0 +1,24 @@
+# Entorno virtual
+.venv/
+
+# Archivos subidos por usuarios (no deben versionarse)
+data/uploads/
+
+# Distribución local
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Scripts de desarrollo/prueba locales
+test_validator.py

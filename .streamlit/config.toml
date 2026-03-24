@@ -1,0 +1,11 @@
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = true
+
+[logger]
+level = "warning"
+
+[server]
+headless = true
